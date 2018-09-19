@@ -18,6 +18,8 @@
     
     typeof 1 输出"number"
     
+    typeof NaN 输出"number"
+    
     typeof true 输出"boolean" 
     
     typeof undefined 输出"undefined"
@@ -32,4 +34,42 @@
  
  3、Js判读数组类型的方法
  
-    1. instanceof 判断变量是不是谁的实例 例：判断 变量 a 是不是 Array 的实例    a instanceof Array  如果是返回 true 否则 
+    1. instanceof 判断变量是不是谁的实例 例：判断 变量 a 是不是 Array 的实例    a instanceof Array  如果是返回 true 否则 false
+    
+    2. constructor 判断变量的构造函数 例：判断 变量 a 的构造函数是不是 Array   a.constructor === Array  如果是返回 true 否则 返回 false
+    
+    3. Object.prototype.toString.call(o) === '[object Array]';
+    
+        引申出1.
+
+        Object.prototype.toString.call(['1']) === "[object Array]"
+
+        Object.prototype.toString.call(null) === "[object Null]"
+
+        Object.prototype.toString.call(1) === "[object Number]"
+
+        Object.prototype.toString.call(NaN) === "[object Number]"
+
+        Object.prototype.toString.call('1') === "[object String]"
+
+        Object.prototype.toString.call(undefined) === "[object Undefined]"
+
+        Object.prototype.toString.call(true) === "[object Boolean]"
+    
+        引申出2.
+
+        [].constructor === Array
+        
+        {}.constructor === Object
+        
+        "string".constructor === String
+        
+        (123).constructor === Number
+        
+        NaN.constructor === Number
+        
+        true.constructor === Boolean
+        
+        function a(){}
+        a.constructor === Function
+        
