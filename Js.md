@@ -75,5 +75,56 @@
             
         引申出3.
          
-            判断变量的某个属性是否可枚举，例：变量 a 的 length 属性是否可枚举，a.propertyIsEnumerable('length') 可枚举返回 true 否则 
-        
+            判断变量的某个属性是否可枚举，例：变量 a 的 length 属性是否可枚举，a.propertyIsEnumerable('length') 可枚举返回 true 否则 false
+
+4、Js本地对象:
+    
+    与宿主无关，ECMAScript 提供的对象（ECMA-262 定义的引用类），使用时需要用关键字 new 进行实例对象;
+    Object
+    Array
+    Date
+    Error
+    String 
+    Boolean
+    Number
+    RegExp
+    Function
+    Math
+    等等
+
+5、Js内置对象：
+
+    与宿主无关，ECMAScript 提供的对象，在js程序执行前就已经存在，无需实例化，是本地对象的子集；
+    Math
+    Global
+    Json
+    
+6、Js宿主对象：
+
+    宿主环境提供的对象，自定义类对象都是宿主对象，所有非本地对象都是宿主对象，浏览器提供的对象 
+    Widow
+    Doument
+    Bom
+    Dom
+    Location
+    History
+    Navigator
+    Screen
+   
+7、全局函数（顶层函数）：
+    
+    encodeURI();把字符串编码为URI，不会编码特殊字符
+    decodeURI();
+    encodeURIComponent();把字符串编码为URI，会编码特殊字符
+    decodeURIComponent();
+    escape();
+    unescape();
+    String();
+    Number();
+    ParseInt();
+    parseFloat();
+    isFinite();
+    isNaN();
+    eval();
+    
+   
