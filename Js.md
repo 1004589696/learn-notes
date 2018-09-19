@@ -126,5 +126,53 @@
     isFinite();
     isNaN();
     eval();
-    
+
+7、数组API
+
+    var a = [1,2], b = [3,4]
+
+    concat();用于两个数组的连接，不会改变元素组，只返回新数组； a.concat(b); //[1,2,3,4]
+    join();将数组中的每一项用指定的字符连接起来，不会改变原数组 a.join("-"); //"1-2"
+
+    sort();将数组进行排序，改变原数组，可接受一个比较器函数，如果没有传函数作为参数，则按Ascii编码进行排序，
+    reverse();翻转数组，改变原数组
+
+    slice();从数组中选择一段，作为新数组返回，不会改变原数组；接受两个参数（start, end）如果为负值则倒数，不包括 end 位的值；
+    splice();会改变原数组，添加、替换、删除； .splice(index, num, addoption);
+
+    pop();后面弹出
+    push();后面添加
+    shift();前面弹出
+    unshift();前面添加 都会改变原数组
+
+    arr.some(function(item,index,arr){
+        //条件 return 值
+        //依次执行数组中的每个元素，如果有一个元素满足条件就返回 true 否则返回 false
+        //遇到满足条件的则不会继续执行下面的循环
+        //返回值 true false
+        //不会改变原数组
+    })
+
+    arr.every(function(item,index,arr){
+        //条件 return 值
+        //依次执行数组中的每个元素，如果每一个元素满足条件就返回 true 否则返回 false
+        //返回值  true false
+        //不会改变原数组
+    })
+
+    arr.filter(function(item,index,arr){
+        //依次执行数组中的每个元素，如果元素满足条件就返回 true 否则返回 false
+        //返回值是一个新的数组，如果没有满足条件的返回空数组
+        //不会改变原数组
+    })
+
+    arr.map(function(item,index,arr){
+        //按照原始数组元素顺序依次处理元素,返回相同长度的数组，如果此项没有return,则返回undefined,作为此项的值
+        //依次执行数组中的每个元素，对数组中的每个元素进行处理；
+        //不会改变原数组
+    })
+
+    arr.forEach(function(item,index,arr){
+
+    })
    
