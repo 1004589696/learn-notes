@@ -13,17 +13,19 @@
     object: 这个我也很难解释的说。就是除了上面五种之外的类型
 
 2、typeof 能够判断大多数变量的数据类型，但 null array 例外
-    typeof '1'
-    "string"
-    typeof 1
-    "number"
-    typeof true
-    "boolean"
-    typeof undefined
-    "undefined"
-    typeof null
-    "object"
-    typeof [];
-    "object"
-    typeof function(){};
-    "function"
+
+    typeof '1' 输出"string"
+    
+    typeof 1 输出"number"
+    
+    typeof true 输出"boolean" 
+    
+    typeof undefined 输出"undefined"
+    
+    typeof null 输出"object"
+    
+    typeof []; 输出"object"
+    
+    typeof {}; 输出"object"
+    
+    typeof function(){}; 输出"function"
