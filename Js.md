@@ -73,7 +73,7 @@
             function a(){}
             a.constructor === Function
             
-         引申出3.
+        引申出3.
          
             判断变量的某个属性是否可枚举，例：变量 a 的 length 属性是否可枚举，a.propertyIsEnumerable('length') 可枚举返回 true 否则 
         
