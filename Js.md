@@ -42,34 +42,38 @@
     
         引申出1.
 
-        Object.prototype.toString.call(['1']) === "[object Array]"
+            Object.prototype.toString.call(['1']) === "[object Array]"
 
-        Object.prototype.toString.call(null) === "[object Null]"
+            Object.prototype.toString.call(null) === "[object Null]"
 
-        Object.prototype.toString.call(1) === "[object Number]"
+            Object.prototype.toString.call(1) === "[object Number]"
 
-        Object.prototype.toString.call(NaN) === "[object Number]"
+            Object.prototype.toString.call(NaN) === "[object Number]"
 
-        Object.prototype.toString.call('1') === "[object String]"
+            Object.prototype.toString.call('1') === "[object String]"
 
-        Object.prototype.toString.call(undefined) === "[object Undefined]"
+            Object.prototype.toString.call(undefined) === "[object Undefined]"
 
-        Object.prototype.toString.call(true) === "[object Boolean]"
+            Object.prototype.toString.call(true) === "[object Boolean]"
     
         引申出2.
 
-        [].constructor === Array
-        
-        {}.constructor === Object
-        
-        "string".constructor === String
-        
-        (123).constructor === Number
-        
-        NaN.constructor === Number
-        
-        true.constructor === Boolean
-        
-        function a(){}
-        a.constructor === Function
+            [].constructor === Array
+
+            {}.constructor === Object
+
+            "string".constructor === String
+
+            (123).constructor === Number
+
+            NaN.constructor === Number
+
+            true.constructor === Boolean
+
+            function a(){}
+            a.constructor === Function
+            
+         引申出3.
+         
+            判断变量的某个属性是否可枚举，例：变量 a 的 length 属性是否可枚举，a.propertyIsEnumerable('length') 可枚举返回 true 否则 
         
