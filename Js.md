@@ -191,4 +191,7 @@
         Array.from();//将类数组转为数组
         
         ...arr;//将数组转为用逗号分隔的参数序列
-   
+        
+        arr.includes(*);//是否包含某个值
+        
+        keys() vaules() entries()//返回的都是遍历器对象
