@@ -195,3 +195,11 @@
         arr.includes(*);//是否包含某个值
         
         keys() vaules() entries()//返回的都是遍历器对象
+        
+9、对象的创建方式
+
+    1.字面量方式创建 var obj = {attr:1};
+    2.通过 new 关键字创建 var obj = new Object({attr:1});
+    2.通过构造函数创建;
+    3.通过 Object.create() 创建;
+    4.通过 Object.setPrototypeOf() 创建;
