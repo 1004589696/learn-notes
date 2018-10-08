@@ -203,3 +203,25 @@
     2.通过构造函数创建;
     3.通过 Object.create() 创建;
     4.通过 Object.setPrototypeOf() 创建;
+
+10、事件流
+    
+    分为三种模式
+        ie的冒泡型事件流：低版本的ie也支持，建议兼容性方面建议使用；目标元素先触发，父元素再一次触发
+        Netscape捕获事件流：父元素先触发，再一次向子元素触发到目标元素
+        dom事件流：以上两种模式都存在；分三个阶段 事件捕获阶段，处于目标阶段，事件冒泡阶段；
+    
+        addEventListener Dom事件绑定，有三个参数，第一个表示事件，第二个表示触发逻辑事件，第三个表示采用冒泡(false) 还是捕获(true)类型,省略默认为冒泡类型
+        
+    阻止冒泡：e.stopPropagation();
+             e.cancelBubble = true;
+             
+    不支持事件冒泡:mouseEnter mouseLeave blur focus resize scroll
+    
+    
+    
+    
+    
+    
+    
+    
