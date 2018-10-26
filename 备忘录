@@ -1,0 +1,5 @@
+（1）打开Windows的cmd命令窗口，将路径切换到Jenkins安装目录文件下
+
+（2）在cmd窗口输入java -jar jenkins.war --httpPort=9000
+
+（3）打开浏览器，输入http://localhost:9000/，进入Jenkins界面
