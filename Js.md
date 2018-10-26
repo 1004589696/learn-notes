@@ -241,3 +241,21 @@
     谁调用指向谁，没有调用者就指向window
     改变指向用call apply bind 三者的区别是call和apply，bind的第一个参数是this，后面的参数就是要传入的参数，不同的是call参数是打散的参数，apply的是数组，而bind是返回一个新的函数，且不会立即执行，原函数中的this并没有改变；
     
+function getObj(attr,arr1,arr2){
+	var num = attr.length;
+	for(var i=0;i<arr1.length;i++){
+		for(var j=0;j<arr2.length;j++){
+            var isnum = 0;
+            for(var z=0;z<num;z++){
+                if(arr1[i][attr[z]]&&(arr1[i][attr[z]] == arr2[j][attr[z]])){
+                    isnum++;
+                }else{
+					break;
+				}
+            }
+            if(isnum == num){
+				console.log(i,j);
+            }
+		}
+	}	
+};
