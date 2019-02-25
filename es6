@@ -4,4 +4,4 @@ module
   
 modulees6模块的思想是，静态化，编译时就能确定依赖关系，输入变量和输出变量，而CommonJS 和 AMD 模块，都只能在运行时确定这些东西。比如，CommonJS 模块就是对象，输入时必须查找对象属性。
 
-Promise是异步操作
+Promise是异步操作的一种解决方式，提供了promise对象，其实也是一个容器，存着
