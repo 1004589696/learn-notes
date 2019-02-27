@@ -1,3 +1,16 @@
+let const
+
+  es6中新添加了let关键字用于声明变量，const关键字用于声明常量，es5中关键字var声明变量
+  let和const声明的变量和常量，不存在变量提升，所以在声明之前使用会抛出错误，而var存在变量提升，所以会是undefined
+  let/const因为不会变量提升，所以会存在暂时性死区
+  let/const声明的变量不能重复声明，否则报错
+  es6中除了let const外，还有import class用于声明变量
+  
+字符串
+  
+  增加了for of循环字符串
+  includes api
+
 module
   es6模块的思想是，静态化，编译时就能确定依赖关系，输入变量和输出变量；
   CommonJS 和 AMD 模块，都只能在运行时确定这些东西。比如，CommonJS 模块就是对象，输入时必须查找对象属性。
