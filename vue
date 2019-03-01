@@ -59,6 +59,28 @@ vue导航守卫：
       // 可以访问组件实例 `this`
     }
 
+vue组件之间传值：
+
+   vuex
+   父组件向子组件传值：props
+   
+   子组件向父组件传值：
+      1.$emit触发父组件传过来的方法 this.$emit('fatherMethod');
+      2.$parent触发父组件方法 this.$parent.fatherMethod();
+      3.以属性的方法传入
+         props: {
+           fatherMethod: {
+             type: Function,
+             default: null
+           }
+         }
+       
+   兄弟组件传值：先实例化一个vue实例bus (this.$root.bus)或注册一个全局的vue实例bus (this.bus)，然后一个组件使用 $emit触发 另一个组件$on监听；
+   provider/inject:
+     在父组件中通过provider来提供变量，然后在子组件中通过inject来注入变量。
+     需要注意的是这里不论子组件有多深，只要调用了inject那么就可以注入provider中的数据。而不是局限于只能从当前父组件的prop属性来获取数据。
+
+
 vue路由：
   动态路由：this.$route.prarms
   router.push()
