@@ -80,6 +80,24 @@ vue组件之间传值：
      在父组件中通过provider来提供变量，然后在子组件中通过inject来注入变量。
      需要注意的是这里不论子组件有多深，只要调用了inject那么就可以注入provider中的数据。而不是局限于只能从当前父组件的prop属性来获取数据。
 
+vue过滤器：过滤器可以串联，可以接受多个参数，
+
+   组件内过滤器
+      filters: {
+         capitalize: function (value) {
+           if (!value) return ''
+           value = value.toString()
+           return value.charAt(0).toUpperCase() + value.slice(1)
+         }
+       }
+       
+   全局过滤器
+   
+       Vue.filter('capitalize', function (value) {
+         if (!value) return ''
+         value = value.toString()
+         return value.charAt(0).toUpperCase() + value.slice(1)
+       })
 
 vue路由：
   动态路由：this.$route.prarms
