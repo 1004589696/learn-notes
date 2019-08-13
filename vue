@@ -107,3 +107,18 @@ vue路由：
 
 vue父子组件传值 通过props 子组件通过$emit触发父组件的传过来的方法
       vuex localstroage
+      
+      
+var mo=function(e){e.preventDefault()};
+
+/***禁止滑动***/
+function stop(){
+    document.body.style.overflow='hidden';
+    document.addEventListener("touchmove",mo,false);//禁止页面滑动
+}
+
+/***取消滑动限制***/
+function move(){
+    document.body.style.overflow='';//出现滚动条
+    document.removeEventListener("touchmove",mo,false);
+}
